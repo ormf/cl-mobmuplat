@@ -1,6 +1,6 @@
 cl-mobmuplat is a simple api to simplify the creation of json files
 for the [MobMuPlat](http://danieliglesia.com/mobmuplat/) platform
-platform using common lisp.
+using common lisp.
 
 Dependencies:
 
@@ -56,14 +56,14 @@ example:
                 :frame `(80 ,(+ 60 (* 60 count)) 50 50)
                 :address (format nil "myButton~2,'0d" count)))))
    out))
-
-;; Check the widgets.lisp file for all possible keywords for the make-mmp
-;; and gui widget functions.
-
-;; A multipage object is the same as a single page object with a
-;; larger screen size. Use the appropriate x-offsets to draw gui
-;; objects on the relevant pages.
 ```
+
+Check the widgets.lisp file for all possible keywords for the make-mmp
+and gui widget functions.
+
+A multipage object is the same as a single page object with a
+larger screen size. Use the appropriate x-offsets to draw gui
+objects on the relevant pages.
 
 The code is (c) Orm Finnendahl, released under the GPL, version 2 or
 later, without any warranties. Use at your own risk.
