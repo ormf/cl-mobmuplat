@@ -4,7 +4,7 @@ using common lisp.
 
 Dependencies:
 
-- [cl-json](https://github.com/hankhero/cl-json) or via quicklisp
+- [cl-json](https://github.com/hankhero/cl-json) (using github) or via [quicklisp](https://www.quicklisp.org/beta/)
 
 Installation:
 
