@@ -1,14 +1,3 @@
-### This repository has Moved!
-
-  Due to the fact that GitHub is hosting the files on privately owned
-  servers located in the USA, this repository has been moved to
-  [Codeberg](https://codeberg.org/ormf/cl-mobmuplat/) in November of
-  2025. It will not receive further updates or patches. Issues and
-  pull requests will not be looked at here either, please submit your
-  patches and issue tickets on Codeberg, or send them directly via
-  good old email patches to the author.
-
-Thanks.
 
 cl-mobmuplat is a simple api to simplify the creation of json files
 for the [MobMuPlat](http://danieliglesia.com/mobmuplat/) platform
