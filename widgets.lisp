@@ -3,21 +3,24 @@
 
 (in-package :cl-mobmuplat)
 
-(defconstant +left+ 0)
-(defconstant +center+ 1)
-(defconstant +right+ 2)
-(defconstant +top+ 0)
-(defconstant +bottom+ 2)
-(defconstant +toggle+ 0)
-(defconstant +momentary+ 1)
-(defconstant +hybrid+ 2)
-(defconstant +slider-index-and-value+ 0)
-(defconstant +all-slider-values+ 1)
-(defconstant +line+ 0)
-(defconstant +fill+ 1)
-(defconstant +select+ 0)
-(defconstant +draw+ 1)
-(defconstant +transparent+ '(0 0 0 0))
+(alexandria:define-constant +left+ 0 :test #'equalp)
+(alexandria:define-constant +center+ 1 :test #'equalp)
+(alexandria:define-constant +right+ 2 :test #'equalp)
+(alexandria:define-constant +top+ 0 :test #'equalp)
+(alexandria:define-constant +bottom+ 2 :test #'equalp)
+(alexandria:define-constant +toggle+ 0 :test #'equalp)
+(alexandria:define-constant +momentary+ 1 :test #'equalp)
+(alexandria:define-constant +hybrid+ 2 :test #'equalp)
+(alexandria:define-constant +slider-index-and-value+ 0 :test #'equalp)
+(alexandria:define-constant +all-slider-values+ 1 :test #'equalp)
+(alexandria:define-constant +line+ 0 :test #'equalp)
+(alexandria:define-constant +fill+ 1 :test #'equalp)
+(alexandria:define-constant +select+ 0 :test #'equalp)
+(alexandria:define-constant +draw+ 1 :test #'equalp)
+(alexandria:define-constant +transparent+ '(0 0 0 0) :test #'equalp)
+(alexandria:define-constant +white+ '(1.0 1.0 1.0 1.0) :test #'equalp)
+(alexandria:define-constant +black+ '(0.0 0.0 0.0 1.0) :test #'equalp)
+
 
 #|
 
@@ -51,14 +54,14 @@ backquote the body and precede all values in the body with a comma.
 
 ;;;; begin api
 
-(defun make-mmp 
+(defun make-mmp
   (&key (pd-file "mmp-test.pd")
      (background-color '(0.5 0.5 0.5 1.0))
      (page-count 1)
      (port 54321)
      (is-page-scroll-short-end nil)
      (start-page-index 0)
-     (canvas-type "tallTablet")
+     (canvas-type "1600x900")
      (is-orientation-landscape t)
      (prefer-android-font-display-in-editor t)
      (version  2.0)
@@ -192,3 +195,7 @@ with coordinate offsets of multiples of the page-width. Using
     (:display-range-lo . ,display-range-lo)
     (:display-range-hi . ,display-range-hi) (:class . ,class)
     (:display-mode . ,display-mode) (:frame . ,frame)))
+
+(defun zoom-frame (frame zoom)
+  (mapcar (lambda (x) (* zoom x))
+          frame))

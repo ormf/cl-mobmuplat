@@ -7,7 +7,7 @@
   :author "Orm Finnendahl <orm.finnendahl@selma.hfmdk-frankfurt.de>"
   :license "licensed under the GPL v2 or later"
   :serial t
-  :depends-on (:cl-json)
+  :depends-on (:cl-json :orm-utils :cl-fad :alexandria)
   :components ((:file "package")
                (:file "widgets")
                (:file "mobmuplat")))
